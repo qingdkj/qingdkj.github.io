@@ -1,172 +1,231 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
-    <meta name="keywords" content="hexo, autumn" />
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
     <title>
-        QINGDKJ
+        
+            无题的随笔 一
+        
     </title>
-    <!-- favicon -->
+    <link rel="icon" href="/img/favicon.png"/>
     
-    <link rel="icon" href="https://cdn.jsdelivr.net/gh/frontendsophie/hexo-theme-autumn@1.0.0/source/img/favicon.ico" />
-     
 <link rel="stylesheet" href="/css/style.css">
 
+    
+<link rel="stylesheet" href="/css/font-awesome.min.css">
 
-    <!-- highlight -->
-    <link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/github-gist.min.css" />
-    <script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>
-    <script>
-        hljs.initHighlightingOnLoad()
-    </script>
-    <script src="https://cdn.jsdelivr.net/gh/frontendsophie/hexo-infinite-scroll@2.0.0/dist/main.js"></script>
+    
+<link rel="stylesheet" href="/css/gitment.css">
 
-    <script>
-        infiniteScroll()
+    
+<link rel="stylesheet" href="/css/hljs.min.css">
 
-        window.addEventListener('DOMContentLoaded', function () {
-            const [
-                mainTitle,
-                mobileMenu,
-                mobileMainTitle,
-                mobileMenuBtn,
-                ipadMenuBtn,
-                aside,
-                closeBtn,
-            ] = getEle(
-                '#main-title',
-                '.mobile-menu',
-                '.mobile-menu h3',
-                '.mobile-menu button',
-                '.ipad-menu',
-                'aside',
-                'aside .close',
-            )
-            const io = new IntersectionObserver(entries => {
-                if (entries[0].intersectionRatio <= 0) {
-                    mobileMainTitle.classList.remove('invisibile')
-                } else {
-                    mobileMainTitle.classList.add('invisibile')
-                }
-            })
-            io.observe(mainTitle)
-
-            clickToggleAside(mobileMenuBtn)
-            clickToggleAside(ipadMenuBtn)
-            clickToggleAside(closeBtn, false)
-
-            const isMenuVisible = window.getComputedStyle(mobileMenu).display !== 'none'
-            if (isMenuVisible) document.body.style.background = 'none'
-
-            function getEle(...args) {
-                return args.map(arg => document.querySelector(arg))
-            }
-
-            function clickToggleAside(btn, show = true) {
-                btn.addEventListener('click', function () {
-                    if (show) {
-                        aside.style.display = 'block'
-                    } else {
-                        aside.style.display = 'none'
-                    }
-                })
-            }
-        })
-    </script>
+    
+<script src="/js/hljs.min.js"></script>
+  
+    
+<script src="/js/gitment.browser.js"></script>
+  
 <meta name="generator" content="Hexo 5.4.0"></head>
-
-<body style="background: url(https://cdn.jsdelivr.net/gh/frontendsophie/hexo-theme-autumn@1.0.0/source/img/button-bg.png) #f3f3f3">
-    <div class="container">
-        <header class="header">
-    <nav class="mobile-menu" style="background: url(https://cdn.jsdelivr.net/gh/frontendsophie/hexo-theme-autumn@1.0.0/source/img/button-bg.png) #f3f3f3">
-        <h3 class="invisibile">
-            <a href="/" class="logo">
-                QINGDKJ
-            </a>
-        </h3>
-        <button class="menu">menu</button>
-    </nav>
-
-    <button class="ipad-menu menu">menu</button>
-
-    <h1 class="title" id="main-title">
-        <a href="/" class="logo">
+<body>
+    <header class="header" id="header">
+    <h1>
+        <a class="title" href="/">
             QINGDKJ
         </a>
     </h1>
-    <h2 class="desc">
-        Life is more than just the present ignoble, poetry and distance.
+    <h2>
+        <a class="motto">
+            Life is more than just the present ignoble, poetry and distance.
+        </a>
     </h2>
-
-    <div class="links">
-        <ul>
+    <nav class="navbar">
+        <ul class="menu">
             
-            <li>
-                <a target="_blank" rel="noopener" href="https://github.com/qingdkj">
-                    Github
-                </a>
-            </li>
             
-            <li>
-                <a target="_blank" rel="noopener" href="https://zhihu.com/people/qingdkj">
-                    Zhihu
-                </a>
-            </li>
+                <li class="menu-item">
+                    <a href="/" class="menu-item-link">
+                        Home
+                    </a>
+                </li>
             
+                
+            
+                <li class="menu-item">
+                    <a href="/archives/" class="menu-item-link">
+                        Archives
+                    </a>
+                </li>
+            
+                
+            
+                <li class="menu-item">
+                    <a target="_blank" rel="noopener" href="https://github.com/qingdkj" class="menu-item-link">
+                        Github
+                    </a>
+                </li>
+            
+                
+            
+                <li class="menu-item">
+                    <a href="/2021/04/15/about/" class="menu-item-link">
+                        About
+                    </a>
+                </li>
+            
+                
+            
+                
+                
+                <li class="menu-item">
+                    <a class="menu-item-link search">
+                        Search                   
+                        <i class="fa fa-long-arrow-right search-icon" aria-hidden="true"></i>
+                    </a>
+                        <input placeholder="Search..." class="search-input" style="display:none;border:none!important;" onkeydown="onEnter(event)" onkeypress="onEnter(event)"></input>
+                </li>
+                
         </ul>
-    </div>
+    </nav>
 </header>
-        <main class="main">
-            <article class="post">
-    
-    
-    
-    <h2 class="post-title">
-        无题的随笔 一
-    </h2>
-    <ul class="post-date">
-        <li>
-            2021-04-15
-        </li>
-        <li>
-            QINGDKJ
-        </li>
-    </ul>
-    <div class="post-content">
-        <p>咖啡店里音乐悠扬，空气依旧芬芳<br>幻想着，你还在身旁</p>
+    <main class="main">
+        <article class="post">
+            <h1>
+                <a class="title" href="/2021/04/15/%E6%97%A0%E9%A2%98%E7%9A%84%E9%9A%8F%E7%AC%94-%E4%B8%80/"> 
+                    无题的随笔 一 
+                </a>
+            </h1>
+            <div class="meta">
+                <a class="date"> 
+                    <i class="fa fa-calendar" aria-hidden="true"></i>                    
+                    2021-04-15   
+                </a>
+                
+                
+                
+                <a class="tag">
+                    <i class="fa fa-tags" aria-hidden="true"></i>  
+                </a>
+                
+                    <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9A%8F%E7%AC%94-%E5%B0%8F%E8%AF%97/" rel="tag">随笔 | 小诗</a></li></ul>
+            </div>
+<div class="toc">
+  
+</div>
+            <div class="content">
+                <p>咖啡店里音乐悠扬，空气依旧芬芳<br>幻想着，你还在身旁</p>
 <p>我那残存的唯一的爱，竟像一座沙筑的大厦<br>顷刻间崩塌</p>
 <p>努力学会遗忘<br>可渗透到心中的记忆<br>融在无声的泪里<br>悄然滴落</p>
 
-    </div>
+            </div>
+          
+           
+            <div class="copyright">
+                <div class="name">
+                    <a>本文作者:</a>
+                    <a>QINGDKJ</a>
+                </div>
+                <div class="link">
+                    <a>本文链接:</a>
+                    <a class="permalink" href="https://deepinos.org/2021/04/15/%E6%97%A0%E9%A2%98%E7%9A%84%E9%9A%8F%E7%AC%94-%E4%B8%80/">https://deepinos.org/2021/04/15/%E6%97%A0%E9%A2%98%E7%9A%84%E9%9A%8F%E7%AC%94-%E4%B8%80/</a>
+                </div>
+                <div class="license">
+                    <a>版权声明:</a>
+                    <a>本博客所有文章除特别声明外，均采用许可协议 CC BY-NC-SA 3.0 CN。转载请注明出处！</a>
+                </div>
+            </div>
+            
+
+          
+
+
 </article>
-        </main>
-        <aside class="aside">
-            <div class="close"></div>
-            <section class="aside-section">
-                
-    <h1>Categories</h1>
+
+
+<div class="tip">
+<button class="tip-btn">
+    打赏
+</button>
+<div class="tip-img">
+<ul>
+    
+<li>
+    <img src="/img/qrcode.jpeg"></img>
+</li>
+
+ 
+<li>
+    <img src="/img/qrcode.jpeg"></img>
+</li>
+
+</ul>
+</div>
+</div>
+
+<div class="more">
+
+    <div class="prev">
+   <a href="/2021/04/15/%E6%9D%82%E8%AF%AD%E5%9B%9E%E5%BF%86%E5%BD%95-%E7%AC%AC%E4%B8%80%E7%AB%A0/">  杂语回忆录 - 第一章</a>
+    </div>
+
+<div></div>
+
+    <div class="next">
+    <a href="/2021/04/15/%E6%B8%85%E6%99%A8%E7%9A%84%E5%9F%8E-%E7%9F%AD%E9%9A%8F%E7%AC%94/"> 清晨的城 - 短随笔 </a>
+    </div>
+    
+</div>
+
+<div class="bdsharebuttonbox">
+<a href="#" class="bds_weixin fa fa-weixin" data-cmd="weixin" title="分享到微信" style="color:#1cbd8f">
+</a>
+<a href="#" class="bds_tsina fa fa-weibo" data-cmd="tsina" title="分享到新浪微博" style="color:#ff6363">
+</a>
+<a href="#" class="bds_twi fa fa-twitter" data-cmd="twi" title="分享到Twitter" style="color:#00A7EB">
+</a>
+<a href="#" class="bds_fbook fa fa-facebook" data-cmd="fbook" title="分享到Facebook" style="color:#00A7EB">
+</a>
+</div>
+<script>
+window._bd_share_config={
+    "common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},
+    "share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='../../../../../static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+ 
+<div id="comments"></div>
+
+<script>
+    var gitment = new Gitment({
+    id: "Thu Apr 15 2021 23:25:25 GMT+0800",
+    owner: "Vevlins",
+    repo: "Vevlins.github.io",
+    oauth: {
+      client_id:"8d83609a651e972e308d",
+      client_secret: "37e40c89a47e957f654e86f71c5caaccad0774de",
+    }
+  })
+  gitment.render('comments')
+</script>
+    </main>
+    <a class="not-found">not found!</a>
+    <div class="search-items">
+    </div>
+    <a href="#header" id="top" style="display:none">
+        <i class="fa fa-sort-asc fa-2x"></i>
+    </a>
+    <footer class="footer">
+    <div class="footer-copyright">©️2017
+    <a href="//github.com/Vevlins/toki" class="link" target="_blank">Toki</a>  by Vevlins
+    </div>
+</footer>
 
     
+<script src="/js/jquery.js"></script>
 
-            </section>
-            <section class="aside-section">
-                
-    <h1>Archives</h1>
-
-    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021</a></li></ul>
-
-
-            </section>
-            <section class="aside-section tag">
-                
-    <h1>Tags</h1>
-
-    <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%B3%E4%BA%8E%E6%88%91-ABOUT/" rel="tag">关于我 | ABOUT</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%96%87%E7%AB%A0-%E9%95%BF%E7%AF%87/" rel="tag">文章 | 长篇</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9A%8F%E7%AC%94-%E5%B0%8F%E8%AF%97/" rel="tag">随笔 | 小诗</a></li></ul>
-
-            </section>
-        </aside>
-    </div>
+    
+<script src="/js/toki.js"></script>
+  
+  <script>hljs.initHighlightingOnLoad();</script>
 </body>
-
 </html>

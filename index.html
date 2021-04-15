@@ -1,362 +1,452 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
-    <meta name="keywords" content="hexo, autumn" />
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
     <title>
-        QINGDKJ
+        
+            QINGDKJ
+        
     </title>
-    <!-- favicon -->
+    <link rel="icon" href="/img/favicon.png"/>
     
-    <link rel="icon" href="https://cdn.jsdelivr.net/gh/frontendsophie/hexo-theme-autumn@1.0.0/source/img/favicon.ico" />
-     
 <link rel="stylesheet" href="/css/style.css">
 
+    
+<link rel="stylesheet" href="/css/font-awesome.min.css">
 
-    <!-- highlight -->
-    <link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/github-gist.min.css" />
-    <script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>
-    <script>
-        hljs.initHighlightingOnLoad()
-    </script>
-    <script src="https://cdn.jsdelivr.net/gh/frontendsophie/hexo-infinite-scroll@2.0.0/dist/main.js"></script>
+    
+<link rel="stylesheet" href="/css/gitment.css">
 
-    <script>
-        infiniteScroll()
+    
+<link rel="stylesheet" href="/css/hljs.min.css">
 
-        window.addEventListener('DOMContentLoaded', function () {
-            const [
-                mainTitle,
-                mobileMenu,
-                mobileMainTitle,
-                mobileMenuBtn,
-                ipadMenuBtn,
-                aside,
-                closeBtn,
-            ] = getEle(
-                '#main-title',
-                '.mobile-menu',
-                '.mobile-menu h3',
-                '.mobile-menu button',
-                '.ipad-menu',
-                'aside',
-                'aside .close',
-            )
-            const io = new IntersectionObserver(entries => {
-                if (entries[0].intersectionRatio <= 0) {
-                    mobileMainTitle.classList.remove('invisibile')
-                } else {
-                    mobileMainTitle.classList.add('invisibile')
-                }
-            })
-            io.observe(mainTitle)
-
-            clickToggleAside(mobileMenuBtn)
-            clickToggleAside(ipadMenuBtn)
-            clickToggleAside(closeBtn, false)
-
-            const isMenuVisible = window.getComputedStyle(mobileMenu).display !== 'none'
-            if (isMenuVisible) document.body.style.background = 'none'
-
-            function getEle(...args) {
-                return args.map(arg => document.querySelector(arg))
-            }
-
-            function clickToggleAside(btn, show = true) {
-                btn.addEventListener('click', function () {
-                    if (show) {
-                        aside.style.display = 'block'
-                    } else {
-                        aside.style.display = 'none'
-                    }
-                })
-            }
-        })
-    </script>
+    
+<script src="/js/hljs.min.js"></script>
+  
+    
+<script src="/js/gitment.browser.js"></script>
+  
 <meta name="generator" content="Hexo 5.4.0"></head>
-
-<body style="background: url(https://cdn.jsdelivr.net/gh/frontendsophie/hexo-theme-autumn@1.0.0/source/img/button-bg.png) #f3f3f3">
-    <div class="container">
-        <header class="header">
-    <nav class="mobile-menu" style="background: url(https://cdn.jsdelivr.net/gh/frontendsophie/hexo-theme-autumn@1.0.0/source/img/button-bg.png) #f3f3f3">
-        <h3 class="invisibile">
-            <a href="/" class="logo">
-                QINGDKJ
-            </a>
-        </h3>
-        <button class="menu">menu</button>
-    </nav>
-
-    <button class="ipad-menu menu">menu</button>
-
-    <h1 class="title" id="main-title">
-        <a href="/" class="logo">
+<body>
+    <header class="header" id="header">
+    <h1>
+        <a class="title" href="/">
             QINGDKJ
         </a>
     </h1>
-    <h2 class="desc">
-        Life is more than just the present ignoble, poetry and distance.
+    <h2>
+        <a class="motto">
+            Life is more than just the present ignoble, poetry and distance.
+        </a>
     </h2>
-
-    <div class="links">
-        <ul>
+    <nav class="navbar">
+        <ul class="menu">
             
-            <li>
-                <a target="_blank" rel="noopener" href="https://github.com/qingdkj">
-                    Github
-                </a>
-            </li>
             
-            <li>
-                <a target="_blank" rel="noopener" href="https://zhihu.com/people/qingdkj">
-                    Zhihu
-                </a>
-            </li>
+                <li class="menu-item">
+                    <a href="/" class="menu-item-link">
+                        Home
+                    </a>
+                </li>
             
+                
+            
+                <li class="menu-item">
+                    <a href="/archives/" class="menu-item-link">
+                        Archives
+                    </a>
+                </li>
+            
+                
+            
+                <li class="menu-item">
+                    <a target="_blank" rel="noopener" href="https://github.com/qingdkj" class="menu-item-link">
+                        Github
+                    </a>
+                </li>
+            
+                
+            
+                <li class="menu-item">
+                    <a href="/2021/04/15/about/" class="menu-item-link">
+                        About
+                    </a>
+                </li>
+            
+                
+            
+                
+                
+                <li class="menu-item">
+                    <a class="menu-item-link search">
+                        Search                   
+                        <i class="fa fa-long-arrow-right search-icon" aria-hidden="true"></i>
+                    </a>
+                        <input placeholder="Search..." class="search-input" style="display:none;border:none!important;" onkeydown="onEnter(event)" onkeypress="onEnter(event)"></input>
+                </li>
+                
         </ul>
-    </div>
+    </nav>
 </header>
-        <main class="main">
-            
-<section class="posts">
+    <main class="main">
+        <section class="posts">
     
         <article class="post">
-            
-                    <h1 class="post-title">
-                        <a href="/2021/04/15/%E6%9D%82%E8%AF%AD%E5%9B%9E%E5%BF%86%E5%BD%95-%E7%AC%AC%E4%B8%80%E7%AB%A0/">
-                            杂语回忆录 - 第一章
-                        </a>
-                    </h1>
+            <h1>
+                <a class="title" href="/2021/04/15/%E6%9D%82%E8%AF%AD%E5%9B%9E%E5%BF%86%E5%BD%95-%E7%AC%AC%E4%B8%80%E7%AB%A0/"> 
+                    杂语回忆录 - 第一章 
+                </a>
+            </h1>
+                        <div class="meta">
+                <a class="date"> 
+                    <i class="fa fa-calendar" aria-hidden="true"></i>                    
+                    2021-04-15   
+                </a>
+                
+                
+                
+                <a class="tag">
+                    <i class="fa fa-tags" aria-hidden="true"></i>  
+                </a>
+                
+                    <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%96%87%E7%AB%A0-%E9%95%BF%E7%AF%87/" rel="tag">文章 | 长篇</a></li></ul>
+            </div>
+            <div class="content">
+                
+                <p>那时的我正一人在偏远的巷子里，蹬着那辆永久的变速车，背着书包，从众多店铺门前掠过。秋天的风里满是萧瑟，黄了的树叶在地上随着风打转。钟楼的那座破旧不堪的钟上的时针，距离“七”的字样还有很远。路上没什么人——不是因为这路偏僻，而是这个时间，估计除了要上学的学生，没什么人会出现在这路上吧。<br>转过一个弯，来到宽阔的主路上。骑行的人依然稀少，除了——一位娇小的女孩飞了过去。我的视线跟随者她远去的背影，游移。<br>“行了，别看了。”突然的拍肩着实吓人一跳，“再看全天下的人都知道你喜欢她咯！想看就去追吧~“<br>方才拍我的是一位身着紧身羽绒服的少年，让我们暂且称之为洛吧。他今天的装束与平时没什么两样——充满了八九十年代老年人的味道。<br>“滚滚滚，她是我的好哥们，再说，谁可能看得上她啊？”我忿忿的说完，一蹬车镫，向她飞去的那个方向奔去。像往常一样，洛也跟在我身后——这老年人的腿脚还算利索。<br>“哟，老年人咋跟上来了？”<br>“滚，你才老年人呢，你不比我大多了！”<br>“放在元谋人那会儿也算是老年人了，毕竟平均年龄也才十五嘛不是。”<br>“你少贫。”<br>快秃了的树枝上依然不断地掉下黄透的叶子，落在街道上。风一吹，四处逃窜。树们飞快的向身后飞去，过了前面那个路口，就可以看到学校的大门了。<br>门卫室空空如也。大门口热闹非凡，估计是又睡过头了，秃头的大叔始终没有出现。手表的指针现实，距离上课时间还有五分钟——运气真背！<br>“fuck.”洛低声骂了句。<br>校门口人不少，扎堆在一起有说有笑的。但是她的身影还算好找，政府这车子在众横七竖八的自行车里起订有限的四处张望。<br>“妤儿！”有人在我后面叫她的名字，声音轰的我耳鸣。然后一个庞大的神曲从我身边寄过去，挨的我一个踉跄。<br>“fuck.”我也低声骂了一句。<br>门口那个秃头在早晨的阳光下发亮，大门终于打开了。他们两个和人群一齐涌入门去，其中还有一个我。<br>“好家伙，纯天然指示灯。”洛在路过那看门的秃头时，低声来了一句。那秃头瞪了我们一眼，没吱声。<br>“报告！”我俩吼一声，他进教室，把刚进来的老师着实吓得不轻。<br>“干什么去了？”<br>“报告，开门人多，挤不进来。”<br>“进。“<br>其实我俩才不会那么老实，乖乖的直接去教室——及时时上课铃声早已响起，学校里的新合作照样人声鼎沸。<br>放下书包，拉开凳子，坐在她的前面，我从书包里摸出一盒绿箭，抽一个给她。<br>“给。“<br>“又是绿箭？”<br>“咋，不想要？”<br>“想，想。”<br>“不然我搞点别的来？”<br>“不用不用……”<br>第一节课是语文，摸鱼time。吐着厚厚的鲜红色口红的语文老师带着满脸的皱纹，开始念经。<br>“负箧曳屣行深山巨谷中……足肤皲裂而不知……”<br>开始犯困，点头。<br>“这是宋濂求学路上的……”<br>百无聊赖，开始捯出压箱底的小笔记本，开始往上背我记的歌词：“Children’s cry and laugh and play……Places we won’t walk……”<br>“xxx！”语文老师一声狮吼，把我吓个半死。<br>“你说你跟宋濂学习一下不好么？整天摇头晃脑的，学李白呢？我刚刚讲的什么？”<br>李白不喝酒也不摇头晃脑啊。心里想着，扭头望着窗外。<br>“喂，怎么不提醒我一下？”语文老师忿忿的走出教室，我小声的跟她嘀咕。<br>“我以为你会的……刚才在写什么，我看看？“<br>“哟，这都注意到了啊。够哥们！”我笑着拿出那个小本，递给她。<br>“那当然！没收！”<br>“哎哎哎……”我无奈的转过头。<br>“中午回家，不要忘了保火花啊。”声音从后面传来。<br>“嗯呢。”<br>我们两年前开始，同坐在这个教室里。原先的关系只能叫互相认识——直到一个学期前，老师毫无征兆的换了座位，我们就坐在一起了。前后位，互相加了QQ，每天有一句没一句的聊天。<br>中午放学，回家拿起手机，打开QQ。<br>“火花。“<br>“火花。”她立刻回复了。<br>信息栏里显示，我们的火花已经40多天了。</p>
 
-                    <ul class="post-date">
-                        <li>
-                            2021年4月15日
-                        </li>
-                        <li>
-                            QINGDKJ
-                        </li>
-                    </ul>
-                    
-                    <div class="post-content ">
-                        
-                            <a href="/2021/04/15/%E6%9D%82%E8%AF%AD%E5%9B%9E%E5%BF%86%E5%BD%95-%E7%AC%AC%E4%B8%80%E7%AB%A0/" class="more-link">Continue reading</a>
-                    </div>
+                
+            </div>
+            <div class="continue">
+            <a href="/2021/04/15/%E6%9D%82%E8%AF%AD%E5%9B%9E%E5%BF%86%E5%BD%95-%E7%AC%AC%E4%B8%80%E7%AB%A0/">
+            继续阅读            <i class="fa fa-angle-right" aria-hidden="true"></i>
+            </a>
+            </div>
         </article>
         
         <article class="post">
-            
-                    <h1 class="post-title">
-                        <a href="/2021/04/15/%E6%97%A0%E9%A2%98%E7%9A%84%E9%9A%8F%E7%AC%94-%E4%B8%80/">
-                            无题的随笔 一
-                        </a>
-                    </h1>
+            <h1>
+                <a class="title" href="/2021/04/15/%E6%97%A0%E9%A2%98%E7%9A%84%E9%9A%8F%E7%AC%94-%E4%B8%80/"> 
+                    无题的随笔 一 
+                </a>
+            </h1>
+                        <div class="meta">
+                <a class="date"> 
+                    <i class="fa fa-calendar" aria-hidden="true"></i>                    
+                    2021-04-15   
+                </a>
+                
+                
+                
+                <a class="tag">
+                    <i class="fa fa-tags" aria-hidden="true"></i>  
+                </a>
+                
+                    <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9A%8F%E7%AC%94-%E5%B0%8F%E8%AF%97/" rel="tag">随笔 | 小诗</a></li></ul>
+            </div>
+            <div class="content">
+                
+                <p>咖啡店里音乐悠扬，空气依旧芬芳<br>幻想着，你还在身旁</p>
+<p>我那残存的唯一的爱，竟像一座沙筑的大厦<br>顷刻间崩塌</p>
+<p>努力学会遗忘<br>可渗透到心中的记忆<br>融在无声的泪里<br>悄然滴落</p>
 
-                    <ul class="post-date">
-                        <li>
-                            2021年4月15日
-                        </li>
-                        <li>
-                            QINGDKJ
-                        </li>
-                    </ul>
-                    
-                    <div class="post-content ">
-                        
-                            <a href="/2021/04/15/%E6%97%A0%E9%A2%98%E7%9A%84%E9%9A%8F%E7%AC%94-%E4%B8%80/" class="more-link">Continue reading</a>
-                    </div>
+                
+            </div>
+            <div class="continue">
+            <a href="/2021/04/15/%E6%97%A0%E9%A2%98%E7%9A%84%E9%9A%8F%E7%AC%94-%E4%B8%80/">
+            继续阅读            <i class="fa fa-angle-right" aria-hidden="true"></i>
+            </a>
+            </div>
         </article>
         
         <article class="post">
-            
-                    <h1 class="post-title">
-                        <a href="/2021/04/15/%E6%B8%85%E6%99%A8%E7%9A%84%E5%9F%8E-%E7%9F%AD%E9%9A%8F%E7%AC%94/">
-                            清晨的城 - 短随笔
-                        </a>
-                    </h1>
+            <h1>
+                <a class="title" href="/2021/04/15/%E6%B8%85%E6%99%A8%E7%9A%84%E5%9F%8E-%E7%9F%AD%E9%9A%8F%E7%AC%94/"> 
+                    清晨的城 - 短随笔 
+                </a>
+            </h1>
+                        <div class="meta">
+                <a class="date"> 
+                    <i class="fa fa-calendar" aria-hidden="true"></i>                    
+                    2021-04-15   
+                </a>
+                
+                
+                
+                <a class="tag">
+                    <i class="fa fa-tags" aria-hidden="true"></i>  
+                </a>
+                
+                    <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9A%8F%E7%AC%94-%E5%B0%8F%E8%AF%97/" rel="tag">随笔 | 小诗</a></li></ul>
+            </div>
+            <div class="content">
+                
+                <p>望着渐红的天空，变得明亮的光线，听着这座熟悉的城市慢慢的喧嚣起来——这还是你认识的那座城市吗？<br>        一座城，最真实的面貌在清晨——或许他还没有醒过来吧？街道不再人来人往，不再满是喧嚣，不再有此起彼伏的吆喝声……留下的，只是寂静，只是无边的寂静，寂静的让你不再认为你认识这座城，不再认为这是一座充斥这巨大压力的城。<br>        这城，现在就只有你自己。<br>        一切都静止了。一切都停止了运行。一切都与往常不一样，一切都变得陌生。在这时，什么都是艺术品，什么都变得可以思考其真谛……<br>        习习微风，缕缕阳光，阵阵欢笑……这座城市苏醒过来了！这座城市一收刚刚的静谧，展现出最风光的一面……</p>
 
-                    <ul class="post-date">
-                        <li>
-                            2021年4月15日
-                        </li>
-                        <li>
-                            QINGDKJ
-                        </li>
-                    </ul>
-                    
-                    <div class="post-content ">
-                        
-                            <a href="/2021/04/15/%E6%B8%85%E6%99%A8%E7%9A%84%E5%9F%8E-%E7%9F%AD%E9%9A%8F%E7%AC%94/" class="more-link">Continue reading</a>
-                    </div>
+                
+            </div>
+            <div class="continue">
+            <a href="/2021/04/15/%E6%B8%85%E6%99%A8%E7%9A%84%E5%9F%8E-%E7%9F%AD%E9%9A%8F%E7%AC%94/">
+            继续阅读            <i class="fa fa-angle-right" aria-hidden="true"></i>
+            </a>
+            </div>
         </article>
         
         <article class="post">
-            
-                    <h1 class="post-title">
-                        <a href="/2021/04/15/To-Myself/">
-                            To Myself
-                        </a>
-                    </h1>
+            <h1>
+                <a class="title" href="/2021/04/15/To-Myself/"> 
+                    To Myself 
+                </a>
+            </h1>
+                        <div class="meta">
+                <a class="date"> 
+                    <i class="fa fa-calendar" aria-hidden="true"></i>                    
+                    2021-04-15   
+                </a>
+                
+                
+                
+                <a class="tag">
+                    <i class="fa fa-tags" aria-hidden="true"></i>  
+                </a>
+                
+                    <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9A%8F%E7%AC%94-%E5%B0%8F%E8%AF%97/" rel="tag">随笔 | 小诗</a></li></ul>
+            </div>
+            <div class="content">
+                
+                <p>走进夕阳下的小巷<br>听烟火人声在耳边回响<br>远处天边彩云层层翻滚<br>留给人无限遐想</p>
+<p>从今天起 少年<br>去追逐你曾经的梦想<br>看一看 你在备忘录中一字一字写下的远方<br>要知道<br>日子常新 未来不远</p>
+<p>从今天起 少年<br>要明白<br>没有人陪你到最后<br>合久必分是从古至今的趋向<br>自己的灵魂属于自己<br>要努力去填补<br>心中她的故地的蛮荒</p>
+<p>从今天起 少年<br>成为你自己真正的模样<br>由自己操控轮船的航向<br>自己去遥望 去发现<br>灯塔璀璨是光芒</p>
+<p>从今天起 少年<br>鼓起勇气 扬帆起航<br>就算暴风雨后的彩虹<br>也会散射出七彩的光<br>寻找新的生活的意义<br>觅到你真正的向往<br>加油 路在前方 </p>
 
-                    <ul class="post-date">
-                        <li>
-                            2021年4月15日
-                        </li>
-                        <li>
-                            QINGDKJ
-                        </li>
-                    </ul>
-                    
-                    <div class="post-content ">
-                        
-                            <a href="/2021/04/15/To-Myself/" class="more-link">Continue reading</a>
-                    </div>
+                
+            </div>
+            <div class="continue">
+            <a href="/2021/04/15/To-Myself/">
+            继续阅读            <i class="fa fa-angle-right" aria-hidden="true"></i>
+            </a>
+            </div>
         </article>
         
         <article class="post">
-            
-                    <h1 class="post-title">
-                        <a href="/2021/04/15/%E4%BB%8E%E6%9C%AA%E5%BF%98%E8%AE%B0/">
-                            从未忘记
-                        </a>
-                    </h1>
+            <h1>
+                <a class="title" href="/2021/04/15/%E4%BB%8E%E6%9C%AA%E5%BF%98%E8%AE%B0/"> 
+                    从未忘记 
+                </a>
+            </h1>
+                        <div class="meta">
+                <a class="date"> 
+                    <i class="fa fa-calendar" aria-hidden="true"></i>                    
+                    2021-04-15   
+                </a>
+                
+                
+                
+                <a class="tag">
+                    <i class="fa fa-tags" aria-hidden="true"></i>  
+                </a>
+                
+                    <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9A%8F%E7%AC%94-%E5%B0%8F%E8%AF%97/" rel="tag">随笔 | 小诗</a></li></ul>
+            </div>
+            <div class="content">
+                
+                <p>回首过去三年的时光<br>往事的声音在耳边回响<br>每天奔跑在去晨读的路上<br>脚步声与午餐铃声混响<br>从未忘记的振奋<br>从不缺席，挥洒汗水在运动场<br>日日夜夜的练习 是战胜的荣光</p>
+<p>犹记得来到这里的第一天<br>青涩的我出现在同学面前<br>沉默不语，彷徨不安<br>慢慢结交的朋友<br>永远也不能忘记<br>一起努力完成的作业与练习<br>向更高水平看齐</p>
+<p>紧张的准备在艺术节前<br>却搞得一切一团糟<br>热烈欢迎在新年前夜<br>给予对方自己最美好的祝福<br>是毕业的时候了<br>在这无比熟悉的地方分别<br>三年时光匆匆<br>忍不住潸然泪下</p>
+<p>回望过去的日子<br>再次记住每一朵花，每一颗草<br>三年生活过的地方<br>记住无私的老师们<br>给予我们的最为美好的回忆</p>
+<p>（有删改）</p>
 
-                    <ul class="post-date">
-                        <li>
-                            2021年4月15日
-                        </li>
-                        <li>
-                            QINGDKJ
-                        </li>
-                    </ul>
-                    
-                    <div class="post-content ">
-                        
-                            <a href="/2021/04/15/%E4%BB%8E%E6%9C%AA%E5%BF%98%E8%AE%B0/" class="more-link">Continue reading</a>
-                    </div>
+                
+            </div>
+            <div class="continue">
+            <a href="/2021/04/15/%E4%BB%8E%E6%9C%AA%E5%BF%98%E8%AE%B0/">
+            继续阅读            <i class="fa fa-angle-right" aria-hidden="true"></i>
+            </a>
+            </div>
         </article>
         
         <article class="post">
-            
-                    <h1 class="post-title">
-                        <a href="/2021/04/15/%E5%90%91%E5%BE%80/">
-                            向往
-                        </a>
-                    </h1>
+            <h1>
+                <a class="title" href="/2021/04/15/%E5%90%91%E5%BE%80/"> 
+                    向往 
+                </a>
+            </h1>
+                        <div class="meta">
+                <a class="date"> 
+                    <i class="fa fa-calendar" aria-hidden="true"></i>                    
+                    2021-04-15   
+                </a>
+                
+                
+                
+                <a class="tag">
+                    <i class="fa fa-tags" aria-hidden="true"></i>  
+                </a>
+                
+                    <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9A%8F%E7%AC%94-%E5%B0%8F%E8%AF%97/" rel="tag">随笔 | 小诗</a></li></ul>
+            </div>
+            <div class="content">
+                
+                <p>尤其是傅许或者邱有句的音乐在破旧的音响中缓缓流出时，那种感觉尤为强烈。他们的音乐中满是诗和远方啊。飘渺的旋律，轻快的节奏，同我的心，一齐游移到窗外，这个陪伴了我十四年的小城市。一切都是那么的熟悉，却又突然那么陌生。低矮的小楼，窄窄的马路，浓郁的乡土气息，这是我对我们城市几近唯一的印象。我也因此而欣慰，而自豪，而感动。但是，当我看到大城市的朋友在社交媒体上晒出的图片，熙熙攘攘的大街，匆匆忙忙的人影，迷幻的灯光，多元的城市文化，仍然会陷入沉默，怅然若失。</p>
+<p>我只去过三次大城市，一次青岛，一次上海，一次武汉。这三次的旅行经历我是怎样也不会忘却的。大城市里的生活氛围，大城市里的节奏格调，都是我向往的样子。</p>
+<p>当我在县城的马路上走动，鼓起勇气在这儿玩耍，但是发现这儿没有任何可以去的玩耍的地方，没有任何可以闲逛的地方时，总会对大城市的人们有一种羡慕之情。</p>
+<p>我无数次在梦中梦到我喜欢的城市，梦到那座山城，梦到熙熙攘攘的人群和各种样式错综复杂的店面时，总会 倏地醒来，枕边却有未干的泪。</p>
+<p>我想多出去走走，但是现实告诉我，这不可能。我只好在梦里，默默的想，又不能被发现，否则会挨骂的……</p>
+<p>从现实角度讲，大城市拥有最好的教育资源，最好的设施，众多的机会，这些不就是每个人都向往的吗？</p>
+<p>有一次，我在路上走着，掏出手机拍街景。一个年轻人走过，嘴中挤出一句，神经病，拍这玩意干什么。我愣了好久。我不能说小城市的生活单一、人民落后，但是大城市的多元我想我比较适合一些吧。</p>
+<p>大城市好大啊，大到每个人都可以正大光明的过着自己的生活，而不会有别人一样的眼光。如果在这个小城市的路上出现了一个Lolita……</p>
+<p>我喜欢大城市更是因为，​我可以在这里只是很小的一份子，过着很普通的事情，而周围无数人都在过着这样的事情，周围的同龄人太多了啊，志同道合的也不少。大概会少些孤单吧。</p>
+<p>但是对我来说，对一个平民家的小孩子来说，我又能干些什么呢？只能在这里埋头过下去​罢了。</p>
 
-                    <ul class="post-date">
-                        <li>
-                            2021年4月15日
-                        </li>
-                        <li>
-                            QINGDKJ
-                        </li>
-                    </ul>
-                    
-                    <div class="post-content ">
-                        
-                            <a href="/2021/04/15/%E5%90%91%E5%BE%80/" class="more-link">Continue reading</a>
-                    </div>
+                
+            </div>
+            <div class="continue">
+            <a href="/2021/04/15/%E5%90%91%E5%BE%80/">
+            继续阅读            <i class="fa fa-angle-right" aria-hidden="true"></i>
+            </a>
+            </div>
         </article>
         
         <article class="post">
-            
-                    <h1 class="post-title">
-                        <a href="/2021/04/15/%E5%A4%9C/">
-                            夜
-                        </a>
-                    </h1>
+            <h1>
+                <a class="title" href="/2021/04/15/%E5%A4%9C/"> 
+                    夜 
+                </a>
+            </h1>
+                        <div class="meta">
+                <a class="date"> 
+                    <i class="fa fa-calendar" aria-hidden="true"></i>                    
+                    2021-04-15   
+                </a>
+                
+                
+                
+                <a class="tag">
+                    <i class="fa fa-tags" aria-hidden="true"></i>  
+                </a>
+                
+                    <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9A%8F%E7%AC%94-%E5%B0%8F%E8%AF%97/" rel="tag">随笔 | 小诗</a></li></ul>
+            </div>
+            <div class="content">
+                
+                <p>夜深了<br>钟表的黑色指针仍在不停的跳动<br>手中的笔尖依然在书本上快速的划过<br>四线三格纸上又多出了一行歪歪扭扭的字</p>
+<p>暖色的灯光<br>洒在苍白的书桌上<br>身旁早已积起厚厚的一摞书本<br>这是今夜唯一的成果</p>
+<p>远处，塔吊上的照明灯不倦的亮着<br>映出黑暗中钢筋混凝土那方棱身体的一角</p>
+<p>风声潇潇<br>月色依旧<br>刹那间的孤犬狂吠<br>偶然中的夜鸟凄鸣</p>
+<p>桌前的那个孩子<br>依然在写着什么<br>而短短的时针<br>早已掠过“十二”的字样</p>
 
-                    <ul class="post-date">
-                        <li>
-                            2021年4月15日
-                        </li>
-                        <li>
-                            QINGDKJ
-                        </li>
-                    </ul>
-                    
-                    <div class="post-content ">
-                        
-                            <a href="/2021/04/15/%E5%A4%9C/" class="more-link">Continue reading</a>
-                    </div>
+                
+            </div>
+            <div class="continue">
+            <a href="/2021/04/15/%E5%A4%9C/">
+            继续阅读            <i class="fa fa-angle-right" aria-hidden="true"></i>
+            </a>
+            </div>
         </article>
         
         <article class="post">
-            
-                    <h1 class="post-title">
-                        <a href="/2021/04/15/%E6%88%91%E6%83%B3/">
-                            我想
-                        </a>
-                    </h1>
+            <h1>
+                <a class="title" href="/2021/04/15/%E6%88%91%E6%83%B3/"> 
+                    我想 
+                </a>
+            </h1>
+                        <div class="meta">
+                <a class="date"> 
+                    <i class="fa fa-calendar" aria-hidden="true"></i>                    
+                    2021-04-15   
+                </a>
+                
+                
+                
+                <a class="tag">
+                    <i class="fa fa-tags" aria-hidden="true"></i>  
+                </a>
+                
+                    <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9A%8F%E7%AC%94-%E5%B0%8F%E8%AF%97/" rel="tag">随笔 | 小诗</a></li></ul>
+            </div>
+            <div class="content">
+                
+                <p>我想在橙色夕阳下漫步<br>任浪漫的气息弥漫<br>与朋友的笑声<br>一起构成最美好的剪影</p>
+<p>我想背着简单行囊<br>在世界的每一个角落留下足迹<br>也想戴着耳机<br>在人来人往的大路上<br>一个人悠然的走</p>
+<p>我想去南欧某个海边<br>站在蓝色的城堡前<br>和海风撞个满怀</p>
+<p>我想去南美偏僻小镇<br>与那里的土著居民打成一片<br>共同欢跳热情的桑巴</p>
+<p>我想去繁华的西欧城市<br>坐在河边的咖啡店<br>喝着咖啡<br>欣赏中世纪古老的哥特风桥塔</p>
+<p>最后<br>我想去维也纳走一趟<br>静静坐在某个剧院里<br>听一场当地的古典音乐会<br>和她</p>
 
-                    <ul class="post-date">
-                        <li>
-                            2021年4月15日
-                        </li>
-                        <li>
-                            QINGDKJ
-                        </li>
-                    </ul>
-                    
-                    <div class="post-content ">
-                        
-                            <a href="/2021/04/15/%E6%88%91%E6%83%B3/" class="more-link">Continue reading</a>
-                    </div>
+                
+            </div>
+            <div class="continue">
+            <a href="/2021/04/15/%E6%88%91%E6%83%B3/">
+            继续阅读            <i class="fa fa-angle-right" aria-hidden="true"></i>
+            </a>
+            </div>
         </article>
         
         <article class="post">
-            
-                    <h1 class="post-title">
-                        <a href="/2021/04/14/about/">
-                            about
-                        </a>
-                    </h1>
+            <h1>
+                <a class="title" href="/2021/04/14/about/"> 
+                    about 
+                </a>
+            </h1>
+                        <div class="meta">
+                <a class="date"> 
+                    <i class="fa fa-calendar" aria-hidden="true"></i>                    
+                    2021-04-14   
+                </a>
+                
+                
+                
+                <a class="tag">
+                    <i class="fa fa-tags" aria-hidden="true"></i>  
+                </a>
+                
+                    <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%B3%E4%BA%8E%E6%88%91-ABOUT/" rel="tag">关于我 | ABOUT</a></li></ul>
+            </div>
+            <div class="content">
+                
+                <blockquote>
+<p>欢迎来到我的小站呀，很高兴遇见你！🤝</p>
+</blockquote>
+<h2 id="🏠-关于本站"><a href="#🏠-关于本站" class="headerlink" title="🏠 关于本站"></a>🏠 关于本站</h2><p>  Hello!这里是QINGDKJ的小站呀~<br>  日常会更新一些有趣好玩的小文章、自己创作的小诗句、还有一些计算机相关的东西啦<br>  其实在好久之前就想建立这么一个网站了 可惜一直没有时间……<br>  之前也断断续续做过好多次 慢慢的淡忘了……到现在才着手实践<br>  这个站创立于2021年4月13日，特别特别的年轻的哟~欢迎继续关注哈哈哈哈<br>  （访问量就是创作的动力.jpg</p>
+<h2 id="👨‍💻-博主是谁"><a href="#👨‍💻-博主是谁" class="headerlink" title="👨‍💻 博主是谁"></a>👨‍💻 博主是谁</h2><p>博主呢，是一位高一的学生哈哈哈哈~<br>准备各种考试ing 所以更新不会多么频繁啦！<br>但是这个地方就是我的树洞奥 还是会不断的更新的~</p>
+<h2 id="⛹-兴趣爱好"><a href="#⛹-兴趣爱好" class="headerlink" title="⛹ 兴趣爱好"></a>⛹ 兴趣爱好</h2><p>我的兴趣爱好的话其实还挺多的 比如说……</p>
+<h3 id="编程"><a href="#编程" class="headerlink" title="编程"></a>编程</h3><p>我是从2017年底开始学习的<del>那个时候我刚刚小学毕业 闲来无事就拾起了信息课本上的Python 从此走上了一条 不 归 路  （doge<br>然后先后学习了C/C++ Java C# JavaScript TypeScript GoLang Php and soon…..<br>现在任Deepin下第三方应用商店<a target="_blank" rel="noopener" href="https://spark-app.store/">Spark Store</a>的前端开发啦</del></p>
+<h3 id="音乐"><a href="#音乐" class="headerlink" title="音乐"></a>音乐</h3><p>这个就比较久远咯<del>我从很小的时候就开始学音乐呢</del>到现在为止十年啦<br>我真的很喜欢钢琴的呢然后有一段时间就 到了痴迷的地步 天天学天天练 所以月光三这种的不是有手就行<br>（逃</p>
+<h3 id="写作"><a href="#写作" class="headerlink" title="写作"></a>写作</h3><p>我自我认为还是一个比较有理想的人叭 但是因为现实的原因没有办法去着手实现……只能靠写小说 写诗歌 去抒发感情啦~<br>虽然写的不够好 但是我表达出来了我的情感 我就很知足了。</p>
+<h2 id="📬-联系我呀"><a href="#📬-联系我呀" class="headerlink" title="📬 联系我呀"></a>📬 联系我呀</h2><p>QQ: 2166944549<br>WeChat: QINGDKJ<br>E-Mail: <a href="mailto:&#x6f;&#104;&#x6e;&#109;&#x61;&#99;&#x68;&#101;&#x73;&#x40;&#x31;&#x36;&#51;&#46;&#x63;&#111;&#x6d;">&#x6f;&#104;&#x6e;&#109;&#x61;&#99;&#x68;&#101;&#x73;&#x40;&#x31;&#x36;&#51;&#46;&#x63;&#111;&#x6d;</a></p>
 
-                    <ul class="post-date">
-                        <li>
-                            2021年4月14日
-                        </li>
-                        <li>
-                            QINGDKJ
-                        </li>
-                    </ul>
-                    
-                    <div class="post-content ">
-                        
-                            <a href="/2021/04/14/about/" class="more-link">Continue reading</a>
-                    </div>
+                
+            </div>
+            <div class="continue">
+            <a href="/2021/04/14/about/">
+            继续阅读            <i class="fa fa-angle-right" aria-hidden="true"></i>
+            </a>
+            </div>
         </article>
         
 </section>
 
-        </main>
-        <aside class="aside">
-            <div class="close"></div>
-            <section class="aside-section">
-                
-    <h1>Categories</h1>
+    </main>
+    <a class="not-found">not found!</a>
+    <div class="search-items">
+    </div>
+    <a href="#header" id="top" style="display:none">
+        <i class="fa fa-sort-asc fa-2x"></i>
+    </a>
+    <footer class="footer">
+    <div class="footer-copyright">©️2017
+    <a href="//github.com/Vevlins/toki" class="link" target="_blank">Toki</a>  by Vevlins
+    </div>
+</footer>
 
     
+<script src="/js/jquery.js"></script>
 
-            </section>
-            <section class="aside-section">
-                
-    <h1>Archives</h1>
-
-    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/">2021</a></li></ul>
-
-
-            </section>
-            <section class="aside-section tag">
-                
-    <h1>Tags</h1>
-
-    <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%B3%E4%BA%8E%E6%88%91-ABOUT/" rel="tag">关于我 | ABOUT</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%96%87%E7%AB%A0-%E9%95%BF%E7%AF%87/" rel="tag">文章 | 长篇</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9A%8F%E7%AC%94-%E5%B0%8F%E8%AF%97/" rel="tag">随笔 | 小诗</a></li></ul>
-
-            </section>
-        </aside>
-    </div>
+    
+<script src="/js/toki.js"></script>
+  
+  <script>hljs.initHighlightingOnLoad();</script>
 </body>
-
 </html>
